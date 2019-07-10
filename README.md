@@ -2,6 +2,7 @@
 Lightweight and pluggable schema validator. As minimum opinionated as possible.
 
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Build Status](https://travis-ci.org/jankapunkt/js-light-schema.svg?branch=master)](https://travis-ci.org/jankapunkt/js-light-schema)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/lightschema.svg)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/lightschema.svg)
