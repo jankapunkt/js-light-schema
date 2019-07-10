@@ -193,6 +193,10 @@ describe('LightSchema', function () {
       })
       assert.isDefined(bufferSchema)
       assert.equal(bufferSchema.model.file.type, ArrayBuffer)
+
+      bufferSchema.validate({
+        file: new ArrayBuffer(8)
+      })
     })
 
     it('allows to add new props', function () {

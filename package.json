@@ -1,5 +1,5 @@
 {
-  "name": "js-light-schema",
+  "name": "lightschema",
   "version": "1.0.0",
   "description": "Very lightweight schema checker",
   "main": "./dist/LightSchema.js",
