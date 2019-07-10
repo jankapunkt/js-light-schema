@@ -1,0 +1,76 @@
+{
+  "name": "js-light-schema",
+  "version": "1.0.0",
+  "description": "Very lightweight schema checker",
+  "main": "./dist/LightSchema.js",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "rollup": "./node_modules/.bin/rollup -c",
+    "build": "rm -rf ./dist/** && babel lib --out-dir ./dist --ignore **/*.tests.js",
+    "copyFiles": "cp ../README.md ./README.md && cp ../LICENSE ./LICENSE",
+    "test": "mocha --timeout=15000 --require @babel/register \"tests/**/*.tests.js\"",
+    "test-coverage": "nyc --reporter=lcov --reporter=text mocha --timeout=15000 --require @babel/register \"tests/**/*.tests.js\"",
+    "test-watch": "npm test -- --watch",
+    "lint": "standard",
+    "lint-fix": "standard --fix"
+  },
+  "author": "Jan Küster <info@jankuester.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.1",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-minify": "^0.5.0-alpha.3cc09dcf",
+    "babel-plugin-istanbul": "^5.1.4",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1",
+    "rollup": "^1.16.7",
+    "rollup-plugin-babel": "^4.3.3",
+    "snazzy": "^8.0.0",
+    "standard": "^12.0.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ],
+    "comments": false
+  },
+  "env": {
+    "test": {
+      "plugins": [
+        "istanbul",
+        {
+          "exclude": [
+            "**/*.tests.js"
+          ]
+        }
+      ]
+    }
+  },
+  "rollup": {
+    "entry": "./dist/LightSchema.js"
+  },
+  "reporter": [
+    "text-summary",
+    "html"
+  ],
+  "require": [
+    "@babel/register"
+  ],
+  "extension": [
+    ".js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jankapunkt/js-light-schema.git"
+  },
+  "cache": true,
+  "temp-dir": "./dist/tests/.nyc-temp",
+  "report-dir": "./dist/tests/nyc"
+}
