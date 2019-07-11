@@ -39,7 +39,8 @@
     "presets": [
       "@babel/env"
     ],
-    "comments": false
+    "comments": false,
+    "sourceMaps": true
   },
   "env": {
     "test": {

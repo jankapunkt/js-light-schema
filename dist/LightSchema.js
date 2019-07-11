@@ -244,7 +244,7 @@ var _types = {};
 var _props = {};
 var _validate = {};
 var _preProcessed = {
-  types: [],
+  types: defaultTypes,
   props: [],
   valid: []
 };
