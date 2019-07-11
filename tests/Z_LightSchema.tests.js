@@ -2,7 +2,6 @@
 import { assert } from 'chai'
 import LightSchema from '../lib/LightSchema'
 import { is } from '../lib/utils'
-import { errors } from '../lib/errors'
 
 const create = (...args) => new LightSchema(...args)
 
