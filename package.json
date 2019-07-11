@@ -1,6 +1,6 @@
 {
   "name": "lightschema",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Very lightweight schema checker",
   "main": "./dist/LightSchema.js",
   "files": [
